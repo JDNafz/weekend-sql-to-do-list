@@ -17,7 +17,7 @@ function deleteTask (){
         method: 'DELETE',
         url: `/tasks/${id}`
     }).then((req,res) => {
-        console.log('begon foul task!')
+        console.log('be gone foul task!')
         getTasks();
     }).catch();
 
