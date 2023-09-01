@@ -2,7 +2,7 @@ $(document).ready(onReady);
 
 function onReady() {
     $('#submit-btn').on('click', addTask);
-    $('#').on('click', '.delete-btn', deleteTask);
+    $('#todoTable').on('click', '.delete-btn', deleteTask);
 
     // load data from the server, put it on the DOM
     getTasks();   

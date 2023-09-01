@@ -1,18 +1,14 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 5000;
 
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('server/public'));
 
-let artistRouter = require('./routes/artist.router.js');
-app.use('/tasks', artistRouter);
-
-
-
+let tasksRouter = require('./routes/tasks.router.js');
+app.use('/tasks', tasksRouter);
 
 
 app.listen(PORT, () => {

@@ -1,6 +1,6 @@
 const pg = require('pg');
 const pool = new pg.Pool({
-    database: 'jazzy_sql',
+    database: 'weekend-to-do-app',
     host: 'localhost',
     port: 5432
 });
