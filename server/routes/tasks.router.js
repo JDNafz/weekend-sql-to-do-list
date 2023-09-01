@@ -59,5 +59,21 @@ router.delete('/:id', (req,res) => {0
     )
 });
 
-
+router.put('/completed/:id', (req,res) => {0
+    let queryText = `
+    UPDATE tasks
+    SET "complete" = NOT "complete"
+    WHERE id = $1 ;
+    `;
+    console.log(req.params['id']);
+    pool.query(queryText, [req.params['id']])
+        .then((result) => {
+            res.sendStatus(200);
+        })
+        .catch((err) => {
+            console.log(`Error making query ${queryText}`,err );
+            res.sendStatus(500);
+        }
+    )
+});
 module.exports = router;

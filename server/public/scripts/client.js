@@ -3,10 +3,27 @@ $(document).ready(onReady);
 function onReady() {
     $('#submit-btn').on('click', addTask);
     $('#todoTable').on('click', '.delete-btn', deleteTask);
+    $('#todoTable').change('.done-checkBox', toggleComplete);
 
     // load data from the server, put it on the DOM
     getTasks();   
 }
+
+function toggleComplete(){
+    let id = $(this).parent().parent().parent().data('id');
+    // .parent().parent().data('id')
+    console.log('toggle id: ', id);
+    $.ajax({
+        method: 'PUT',
+        url: `/tasks/completed/${id}`,
+    }).then((req,res) => {
+        console.log('toggle task done')
+        getTasks();
+    }).catch( err => {
+        console.log("err toggling task", err)
+    }
+    );
+}//end toggleComplete
 
 function deleteTask (){
     // console.log("this.data:", $(this).parent().parent().data )
@@ -61,15 +78,38 @@ function render( tasks ) {
 
     // Add all Tasks to table
     for(let task of tasks) {
-        
-        let element = $(`
-            <tr>
-                <td>${task.name}</td>
-                <td>
-                    <input class="delete-btn" class="btn" type="submit" value="remove">
-                </td>
-            </tr>`);
-        element.data('id',task.id)
-        $('#todoTable').append(element);
+        let $element = $( getElementString(task) );
+        $element.data('id',task.id);
+        console.log("task.id added to .data():", task.id);
+        $('#todoTable').append($element);
     }
 } //end render
+
+function getElementString(task){
+    let elementString;
+    if (task.complete){
+        elementString = `
+        <tr>
+            <td>
+                <input type="checkbox" class="done-checkBox completed" checked></td>
+            <td>${task.task}</td>
+            <td>
+                <input class="delete-btn" class="btn" type="submit" value="Delete">
+            </td>
+        </tr>`
+    } else {
+        elementString =`
+        <tr>
+            <td>
+                <input type="checkbox" class="done-checkBox">
+            </td>
+            <td>${task.task}</td>
+            <td>
+                <input class="delete-btn" class="btn" type="submit" value="Delete">
+            </td>
+        </tr>`
+    }
+    return elementString
+}//end getElementString
+
+
