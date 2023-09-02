@@ -2,7 +2,7 @@ CREATE TABLE tasks (
   "id" serial PRIMARY KEY,
   "complete" boolean DEFAULT false,
   "task" varchar(50) NOT NULL,
-  "timeCompleted" 
+  "timeCompleted" smallint
 );
 
 INSERT INTO tasks (task)

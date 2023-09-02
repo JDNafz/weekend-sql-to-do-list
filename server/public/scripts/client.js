@@ -100,8 +100,7 @@ function getElementString(task){
             <td>
                 <input type="checkbox" class="done-checkBox">
             </td>
-            <td>${timeString}
-            </td>
+            <td></td>
             <td class="tasks">${task.task}</td>
             <td>
                 <input class="delete-btn" class="btn" type="submit" value="Delete">
@@ -112,11 +111,18 @@ function getElementString(task){
 }//end getElementString
 
 function getTimeBack(time){
-    console.log(time);
-    const mins = time % 60
-    const hours = (time - mins) / 60
-    console.log("mins:", hours, mins)
-    return `${hours}: ${mins}`
+    // console.log(time);
+    let mins = time % 60
+    mins = mins == 0 ? "00": mins;
+    let hours = (time - mins) / 60
+    let am = "am";
+    hours = hours == 0 ? "12" : hours; //0am should be 12am
+    if (hours > 12){ //convert to pm instead of military time.
+        am = "pm";
+        hours -= 12;
+    }
+    // console.log("mins:", hours, mins)
+    return `${hours}:${mins}${am}` //TODO: Insert the Day?
 
 }
 
