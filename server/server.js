@@ -18,20 +18,20 @@ app.listen(PORT, () => {
 
 
 //  ✅ set up front end html
-// set up db: weekend-to-do-app > tasks TABLE
-    // include database.sql text file
+//  ✅ set up db: weekend-to-do-app > tasks TABLE
+    //  ✅ include database.sql text file
     //
 
 
-// POST client task, server route, route Pool, SQL command 
-// DATAFORMAT { (id), complete, taskDescription} 
-// GET client tasks, server route, route pool, SQL command
-// RENDER client 
-    // client DELETE button
-// DELETE client task, server route, route pool, SQL command
-// Complete-btn/box client ajax, server route, route pool, SQL command
+//  ✅ POST client task, server route, route Pool, SQL command 
+//  ✅  DATAFORMAT { (id), complete, taskDescription} 
+//  ✅ GET client tasks, server route, route pool, SQL command
+//  ✅ RENDER client 
+    //  ✅ client DELETE button
+//  ✅ DELETE client task, server route, route pool, SQL command
+//  ✅ Complete-btn/box client ajax, server route, route pool, SQL command
 
-//css styling on completed
+//  ✅ css styling on completed
 
 
 

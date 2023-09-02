@@ -65,7 +65,7 @@ router.put('/completed/:id', (req,res) => {0
     SET "complete" = NOT "complete"
     WHERE id = $1 ;
     `;
-    console.log(req.params['id']);
+    // console.log(req.params['id']);
     pool.query(queryText, [req.params['id']])
         .then((result) => {
             res.sendStatus(200);
@@ -76,4 +76,7 @@ router.put('/completed/:id', (req,res) => {0
         }
     )
 });
+
+
+
 module.exports = router;

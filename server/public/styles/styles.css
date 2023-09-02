@@ -5,12 +5,13 @@ body, h1 {
 
 body {
   font-family: sans-serif;
+  background-color: rgb(144, 152, 135);
 }
 
 header {
   padding: 1rem;
-  background-color: #641723;
-  color: #E8DFC4;
+  background-color: #2d5f4a;
+  color: #fafafa;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -19,21 +20,30 @@ main {
   width: 80%;
   margin: auto;
 }
+input {
+  background-color: rgb(104, 110, 97);
+  color: rgb(254, 254, 254);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(179, 185, 177);
+  opacity: 1; /* Firefox */
+}
 
 section {
-  border: 2px solid #641723;
+  border: 2px solid #000000;
   border-radius: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
 }
 
 h2 {
-  color: #641723;
+  color: #4a4344;
 }
 
 form {
   margin-bottom: 1rem;
 }
+
 
 table {
   border-collapse: collapse;
@@ -46,11 +56,12 @@ th, td {
 }
 
 thead tr {
-background-color: #D8973C;
+background-color: #3c3c3c;
+color: rgb(165, 180, 175);
 }
 
 tr:nth-child(even) {
-  background-color: #E8DFC4;
+  background-color: #959c96;
 }
 
 .complete {

@@ -19,20 +19,16 @@ function toggleComplete(){
         getTasks();
     }).catch( err => {
         console.log("err toggling task", err)
-    }
-    );
+    })
 }//end toggleComplete
 
 function deleteTask (){
-    // console.log("this.data:", $(this).parent().parent().data )
-
     let id = $(this).parent().parent().data('id')
-    console.log('Delete id: ', id);
     $.ajax({
         method: 'DELETE',
         url: `/tasks/${id}`
     }).then((req,res) => {
-        console.log('be gone foul task!')
+        // console.log('be gone foul task!')
         getTasks();
     }).catch();
 
