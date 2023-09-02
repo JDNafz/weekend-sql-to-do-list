@@ -24,7 +24,7 @@ app.listen(PORT, () => {
 
 
 //  ✅ POST client task, server route, route Pool, SQL command 
-//  ✅  DATAFORMAT { (id), complete, taskDescription} 
+//  ✅  DataFormat { (id), complete, taskDescription} 
 //  ✅ GET client tasks, server route, route pool, SQL command
 //  ✅ RENDER client 
     //  ✅ client DELETE button
@@ -33,5 +33,23 @@ app.listen(PORT, () => {
 
 //  ✅ css styling on completed
 
+// Finish a nice readme
+//          Round 2 of readme
 
+// feature-time-completed
+//          record when a task was completed, display on DOM
+//              refactor db to hold time completed.
 
+//  feature-confirm-delete
+//      create an 'are you sure?' bootstrap modal? Sweet Alert?> CDN option
+
+// feature-light-dark-mode
+//          enable a toggle for light or dark mode
+
+// feature-ordering-task-query
+//       Research [Query Params](https://expressjs.com/en/api.html#req.query) to have the request reverse the order of the returned TODOs  
+
+//  feature-styling-bootstrap
+//          buttons: green for create, red for delete
+//          style inputs in "the bootstrap way"
+//          responsive > Ipad, cellphone, desktop

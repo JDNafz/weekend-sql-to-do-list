@@ -1,12 +1,18 @@
-/* Colors via Coolors: https://coolors.co/641723-e8dfc4-d8973c-bd632f-273e47 */
 body, h1 {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Muli';
+  src: url('./muli/Muli.ttf');
+}
+* {
+  font-family: 'Muli';
+}
 body {
-  font-family: sans-serif;
   background-color: rgb(144, 152, 135);
 }
+
 
 header {
   padding: 1rem;
