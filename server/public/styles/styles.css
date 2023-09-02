@@ -66,4 +66,5 @@ tr:nth-child(even) {
 
 .complete {
   text-decoration: line-through;
+  background-color: rgb(113, 128, 116) !important;
 }
