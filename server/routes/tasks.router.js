@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const pool = require('../modules/pool');
 
-const pool = require('./pool');
+let timeCalc = require('./timeCalc');
 
 router.get('/', (req, res) => {
     // console.log('server is req artist from db...')
@@ -59,14 +60,18 @@ router.delete('/:id', (req,res) => {0
     )
 });
 
-router.put('/completed/:id', (req,res) => {0
+router.put('/completed/:id', (req,res) => {
+    let SQLtime = timeCalc();
+    // console.log(SQLtime);
+
+
     let queryText = `
     UPDATE tasks
-    SET "complete" = NOT "complete"
-    WHERE id = $1 ;
+    SET "complete" = NOT "complete", "time" = $1
+    WHERE id = $2 ;
     `;
     // console.log(req.params['id']);
-    pool.query(queryText, [req.params['id']])
+    pool.query(queryText, [SQLtime, req.params['id']])
         .then((result) => {
             res.sendStatus(200);
         })
