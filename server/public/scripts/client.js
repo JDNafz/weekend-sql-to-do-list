@@ -10,10 +10,11 @@ function onReady() {
 }
 
 function toggleComplete(){
+    let time = {time: Date.now()}
     let id = $(this).parent().parent().data('id');
     $.ajax({
         method: 'PUT',
-        url: `/tasks/completed/${id}`,
+        url: `/tasks/completed/${id}`
     }).then((req,res) => {
         // console.log('toggle!')
         getTasks();
@@ -53,7 +54,6 @@ function addTask() {
     });
 }//end addTask
 
-
 function getTasks() { 
     // get task data from the server
     $.ajax({
@@ -79,12 +79,16 @@ function render( tasks ) {
 } //end render
 
 function getElementString(task){
+    let timeString = getTimeBack(task.time);
     let elementString;
     if (task.complete){
         elementString = `
         <tr class="complete">
             <td>
-                <input type="checkbox" class="done-checkBox" checked></td>
+                <input type="checkbox" class="done-checkBox" checked>
+            </td>
+            <td>${timeString}
+            </td>
             <td>${task.task}</td>
             <td>
                 <input class="delete-btn" class="btn" type="submit" value="Delete">
@@ -96,7 +100,9 @@ function getElementString(task){
             <td>
                 <input type="checkbox" class="done-checkBox">
             </td>
-            <td>${task.task}</td>
+            <td>${timeString}
+            </td>
+            <td class="tasks">${task.task}</td>
             <td>
                 <input class="delete-btn" class="btn" type="submit" value="Delete">
             </td>
@@ -105,4 +111,12 @@ function getElementString(task){
     return elementString
 }//end getElementString
 
+function getTimeBack(time){
+    console.log(time);
+    const mins = time % 60
+    const hours = (time - mins) / 60
+    console.log("mins:", hours, mins)
+    return `${hours}: ${mins}`
+
+}
 

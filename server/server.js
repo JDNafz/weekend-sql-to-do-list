@@ -17,10 +17,11 @@ app.listen(PORT, () => {
 
 
 
+
+
 //  ✅ set up front end html
 //  ✅ set up db: weekend-to-do-app > tasks TABLE
     //  ✅ include database.sql text file
-    //
 
 
 //  ✅ POST client task, server route, route Pool, SQL command 
@@ -40,6 +41,8 @@ app.listen(PORT, () => {
 // feature-time-completed
 //          record when a task was completed, display on DOM
 //              refactor db to hold time completed.
+                // reformat time to DOM
+
 
 //  feature-confirm-delete
 //      create an 'are you sure?' bootstrap modal? Sweet Alert?> CDN option
