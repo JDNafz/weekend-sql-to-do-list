@@ -52,3 +52,7 @@ background-color: #D8973C;
 tr:nth-child(even) {
   background-color: #E8DFC4;
 }
+
+.complete {
+  text-decoration: line-through;
+}

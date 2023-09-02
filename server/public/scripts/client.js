@@ -10,15 +10,12 @@ function onReady() {
 }
 
 function toggleComplete(){
-    console.log("toggle!")
     let id = $(this).parent().parent().data('id');
-
-    console.log('toggle id: ', id);
     $.ajax({
         method: 'PUT',
         url: `/tasks/completed/${id}`,
     }).then((req,res) => {
-        console.log('toggle task done')
+        // console.log('toggle!')
         getTasks();
     }).catch( err => {
         console.log("err toggling task", err)
@@ -81,7 +78,6 @@ function render( tasks ) {
     for(let task of tasks) {
         let $element = $( getElementString(task) );
         $element.data('id',task.id);
-        console.log("task.id added to .data():", task.id);
         $('#todoTable').append($element);
     }
 } //end render
@@ -90,9 +86,9 @@ function getElementString(task){
     let elementString;
     if (task.complete){
         elementString = `
-        <tr class="thisOne">
+        <tr class="complete">
             <td>
-                <input type="checkbox" class="done-checkBox completed" checked></td>
+                <input type="checkbox" class="done-checkBox" checked></td>
             <td>${task.task}</td>
             <td>
                 <input class="delete-btn" class="btn" type="submit" value="Delete">
