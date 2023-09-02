@@ -3,15 +3,16 @@ $(document).ready(onReady);
 function onReady() {
     $('#submit-btn').on('click', addTask);
     $('#todoTable').on('click', '.delete-btn', deleteTask);
-    $('#todoTable').change('.done-checkBox', toggleComplete);
+    $('#todoTable').on('change','.done-checkBox', toggleComplete);
 
     // load data from the server, put it on the DOM
     getTasks();   
 }
 
 function toggleComplete(){
-    let id = $(this).parent().parent().parent().data('id');
-    // .parent().parent().data('id')
+    console.log("toggle!")
+    let id = $(this).parent().parent().data('id');
+
     console.log('toggle id: ', id);
     $.ajax({
         method: 'PUT',
@@ -89,7 +90,7 @@ function getElementString(task){
     let elementString;
     if (task.complete){
         elementString = `
-        <tr>
+        <tr class="thisOne">
             <td>
                 <input type="checkbox" class="done-checkBox completed" checked></td>
             <td>${task.task}</td>
