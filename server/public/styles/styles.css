@@ -21,15 +21,15 @@ header {
   text-align: center;
   margin-bottom: 2rem;
 }
-
+/* 
 main {
   width: 80%;
   margin: auto;
-}
-input {
+} */
+/* input {
   background-color: rgb(104, 110, 97);
   color: rgb(254, 254, 254);
-}
+} */
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(179, 185, 177);
   opacity: 1; /* Firefox */
@@ -46,20 +46,20 @@ h2 {
   color: #4a4344;
 }
 
-form {
+/* form {
   margin-bottom: 1rem;
-}
+} */
 
-
+/* 
 table {
   border-collapse: collapse;
   width: 100%;
-}
-
+} */
+/* 
 th, td {
   text-align: left;
   padding: 8px;
-}
+} */
 
 thead tr {
 background-color: #3c3c3c;
