@@ -53,10 +53,7 @@ app.listen(PORT, () => {
 // feature-ordering-task-query
 //       Research [Query Params](https://expressjs.com/en/api.html#req.query) to have the request reverse the order of the returned TODOs  
 
-//  feature-styling-bootstrap
-//          buttons: green for create, red for delete
-//          style inputs in "the bootstrap way"
-//          responsive > Ipad, cellphone, desktop
+
 
 // feature-modules
 //          add modules to clean up script files
