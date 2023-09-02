@@ -7,10 +7,10 @@ const currentHours = currentTime.getHours();
 const currentMinutes = currentTime.getMinutes();
 
 // Display the current time in hours and minutes
-console.log(`Current time: ${currentHours}:${currentMinutes}`);
+// console.log(`Current time: ${currentHours}:${currentMinutes}`);
 
 const timeInMinutes = currentHours * 60 + currentMinutes;
-console.log("time in minutes", timeInMinutes)
+// console.log("time in minutes", timeInMinutes)
 
 // Get back to time:
 // const mins = timeInMinutes % 60
