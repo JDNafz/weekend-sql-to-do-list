@@ -33,8 +33,9 @@ app.listen(PORT, () => {
 
 //  ✅ css styling on completed
 
-// Finish a nice readme
+//  ✅ Finish a nice readme
 //          Round 2 of readme
+//          Add gifs
 
 // feature-time-completed
 //          record when a task was completed, display on DOM
