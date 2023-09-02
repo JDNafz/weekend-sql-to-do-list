@@ -38,11 +38,11 @@ app.listen(PORT, () => {
 //          Round 2 of readme
 //          Add gifs
 
-// feature-time-completed
-//          record when a task was completed, display on DOM
-//              refactor db to hold time completed.
-                // reformat time to DOM
-
+// ✅ feature-time-completed
+//         ✅  record when a task was completed, display on DOM
+//             ✅  refactor db to hold time completed.
+//             ✅  reformat time to DOM
+//                  go back and add Day of the week or date?
 
 //  feature-confirm-delete
 //      create an 'are you sure?' bootstrap modal? Sweet Alert?> CDN option
@@ -57,3 +57,8 @@ app.listen(PORT, () => {
 //          buttons: green for create, red for delete
 //          style inputs in "the bootstrap way"
 //          responsive > Ipad, cellphone, desktop
+
+// feature-modules
+//          add modules to clean up script files
+//          getTimeBack
+//          getElementString

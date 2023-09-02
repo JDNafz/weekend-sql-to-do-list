@@ -5,7 +5,6 @@ function onReady() {
     $('#todoTable').on('click', '.delete-btn', deleteTask);
     $('#todoTable').on('change','.done-checkBox', toggleComplete);
 
-    // load data from the server, put it on the DOM
     getTasks();   
 }
 
