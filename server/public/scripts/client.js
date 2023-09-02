@@ -115,16 +115,15 @@ function getTimeBack(time){
     mins = mins == 0 ? "00": mins < 10 ? "0"+ mins: mins;
     let hours = (time - mins) / 60
     let am = "am";
-    hours = hours == 0 ? "12" : hours; //0am should be 12am
-    if (hours == 0){
-        hours = "12";
-    }
     if (hours == "12"){
         am = "pm"
     }
     if (hours > 12){ //convert to pm instead of military time.
         am = "pm";
         hours -= 12;
+    }
+    if (hours == 0){
+        hours = "12";
     }
     // console.log("mins:", hours, mins)
     return `${hours}:${mins}${am}` //TODO: Insert the Day?
