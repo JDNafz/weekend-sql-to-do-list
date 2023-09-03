@@ -11988,6 +11988,7 @@ textarea.form-control-lg {
 div h1, div .h1 {
   display: flex;
   justify-content: center;
+  padding: 5%;
 }
 
 .tasks {
