@@ -11971,18 +11971,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background-color: --bs-indigo;
-}
-
-h2, .h2 {
-  font-size: large;
-}
-
-body, h1, .h1 {
-  margin: 0;
-}
-
 @font-face {
   font-family: "Muli";
   src: url("./muli/Muli.ttf");
@@ -11992,32 +11980,15 @@ body, h1, .h1 {
 }
 
 body {
-  background-color: rgb(144, 152, 135);
+  background-color: rgb(38, 57, 22);
 }
 
 header {
   padding: 1rem;
-  background-color: #2d5f4a;
+  background-color: rgb(49, 80, 59);
   color: #fafafa;
   text-align: center;
   margin-bottom: 2rem;
-}
-
-::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(179, 185, 177);
-  opacity: 1; /* Firefox */
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(179, 185, 177);
-  opacity: 1; /* Firefox */
-}
-
-section {
-  border: 2px solid #000000;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
 }
 
 thead tr {

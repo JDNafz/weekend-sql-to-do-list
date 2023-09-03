@@ -79,33 +79,31 @@ function render( tasks ) {
 
 function getElementString(task){
     let timeString = getTimeBack(task.time);
-    let elementString;
-    if (task.complete){
-        elementString = `
+    let elementString = `
         <tr class="complete">
             <td>
                 <input type="checkbox" class="done-checkBox" checked>
             </td>
+            `
+    if (task.complete){ //COMPLETE
+        elementString += `
             <td>${timeString}
             </td>
             <td class="tasks">${task.task}</td>
-            <td>
-                <input class="delete-btn" class="btn" type="submit" value="Delete">
-            </td>
-        </tr>`
-    } else {
-        elementString =`
-        <tr>
-            <td>
-                <input type="checkbox" class="done-checkBox">
-            </td>
+            
+        `
+    } else { // NOT COMPLETE
+        elementString +=`
             <td></td>
             <td>${task.task}</td>
-            <td>
-                <input class="delete-btn" class="btn" type="submit" value="Delete">
-            </td>
-        </tr>`
-    }
+            `
+        }
+    elementString += `    
+        <td>
+            <input class="btn btn-dark" type="submit" value="Delete">
+        </td>
+    </tr>`
+    // console.log(elementString);
     return elementString
 }//end getElementString
 
