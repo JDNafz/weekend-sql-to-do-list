@@ -11993,3 +11993,11 @@ div h1, div .h1 {
 .tasks {
   text-decoration: line-through;
 }
+
+#todoIn {
+  width: 40vw;
+}
+
+.container {
+  max-width: 900px;
+}

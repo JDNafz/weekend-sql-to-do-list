@@ -50,7 +50,7 @@ app.listen(PORT, () => {
 // feature-styling-bootstrap
 //          ✅  Add Bootstrap 
 //          ✅  Buttons - red: delete, green: submit
-//          Inputs -- make your text inputs styled in the bootstrap way
+//          ✅  Inputs -- make your text inputs styled in the bootstrap way
 //          Responsive -- make your app responsive to different screen sizes -- check out the Layout section
 //          enable a toggle for light or dark mode
 
