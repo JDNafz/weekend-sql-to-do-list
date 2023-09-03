@@ -1,22 +1,17 @@
-![REPO SIZE](https://img.shields.io/github/repo-size/blakesmithmn/weekend-sql-to-do-list?style=flat-square)
-![TOP_LANGUAGE](https://img.shields.io/github/languages/top/blakesmithmn/weekend-sql-to-do-list?style=flat-square)
-![FORKS](https://img.shields.io/github/forks/blakesmithmn/weekend-sql-to-do-list?style=social)
 
-
-# Full Stack To-Do List:
+# Full Stack To-Do List App:
 
 ## Description
 
-_Duration: # hour Sprint_
-3pm start:
-hours: 3-4.30, 9pm-
+_Duration: 14 hour Sprint_
 
-The weekend coding challenge was to create a full-stack to-do list web app.
+The weekend coding challenge was to create a full-stack to-do list web app. 
 
-## Screen Shots
+<!-- ## Screen Shots
 
 GIF briefly showing application features:
 ![](demo.gif)
+ -->
 
 
 ## Description & Approach
@@ -24,7 +19,7 @@ GIF briefly showing application features:
 
 I like to take the description of the requirements and read it through once to get a general idea of the project. Next I read it again, creating a to-do list of the major features that need to be implemented. I like to visualize all the little moving parts before starting, so from there I write out the linking pieces that are needed for each of the major features. 
 
-![](concept.png)
+<!-- insert image for approach to the project -->
 
 
 
@@ -49,7 +44,7 @@ Keep track of your to-do list items.
 
 ## Developer Notes
 
-PARAGRAPH
+This project was satisfying to work through and a new challenge to expand my front end knowledge to start making use of bootstrap and minimal SCSS. I look forward to learning more and developing more specific styling options. In the future if I'm able to dedicate more time to this project I would love to implement more modules for some of the calculations of time, and further develop the timestamp feature to neatly include the date.
 
 ## Acknowledgement
-This was an assignment for [Prime Digital Academy](www.primeacademy.io). Thank you for guiding me on my software development journey.
+This was an assignment for [Prime Digital Academy](www.primeacademy.io). Thank you for guiding me as part of the Jade cohort on my software development journey.
