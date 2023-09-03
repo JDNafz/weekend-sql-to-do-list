@@ -1,12 +1,29 @@
 $(document).ready(onReady);
 
 function onReady() {
-    $('#submit-btn').on('click', addTask);
-    $('#todoTable').on('click', '.delete-btn', deleteTask);
-    $('#todoTable').on('change','.done-checkBox', toggleComplete);
-    $('#theme-toggle').on('click', toggleTheme)
+    runListeners();
     getTasks();   
 }
+
+function runListeners(){
+    $('#submit-btn').on('click', addTask);
+    $('#todoTable').on('change','.done-checkBox', toggleComplete);
+    $('#theme-toggle').on('click', toggleTheme)
+    
+    $('#todoTable').on('click', '.delete-btn', confirmDelete);
+    $('#todoTable').on('click', '.confirmDelete', deleteTask);
+}
+
+function confirmDelete(){
+    if ($(this).attr('Value') == "Are you sure?") {
+        $(this).attr('Value','delete');
+    } else {
+        $(this).attr('Value', "Are you sure?");
+    }
+    $(this).parent().prev().removeClass('d-none');
+    
+}
+
 
 function toggleTheme(){
     console.log("toggle theme");
@@ -112,6 +129,9 @@ function getElementString(task){
             `
         }
     elementString += `    
+        <td class="d-none">
+            <input class="confirmDelete btn btn-danger" type="submit" value="Delete">
+        </td>
         <td>
             <input class="delete-btn btn btn-outline-danger" type="submit" value="Delete">
         </td>
