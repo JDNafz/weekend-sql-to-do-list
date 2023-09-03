@@ -21,7 +21,6 @@ function toggleTheme(){
 }// end toggleTheme
 
 function toggleComplete(){
-    // let time = {time: Date.now()}
     let id = $(this).parent().parent().data('id');
     $.ajax({
         method: 'PUT',
@@ -94,18 +93,20 @@ function getElementString(task){
     let elementString = `
         <tr class="complete">
             <td>
-                <input type="checkbox" class="done-checkBox" checked>
-            </td>
             `
     if (task.complete){ //COMPLETE
         elementString += `
-            <td>${timeString}
-            </td>
-            <td class="tasks">${task.task}</td>
+            <input type="checkbox" class="done-checkBox" checked>
+        </td>
+        <td>${timeString}
+        </td>
+        <td class="tasks">${task.task}</td>
             
         `
     } else { // NOT COMPLETE
         elementString +=`
+                <input type="checkbox" class="done-checkBox">
+            </td>
             <td></td>
             <td>${task.task}</td>
             `
