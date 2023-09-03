@@ -9,11 +9,19 @@ function onReady() {
 }
 
 function toggleTheme(){
-
+    console.log("toggle theme");
+    console.log("GET ATTRIBUTE: ", $('html').attr('data-bs-theme'));
+    if ($('html').attr('data-bs-theme') == 'dark'){
+        $('html').attr('data-bs-theme', 'light');
+        $('#theme-toggle').text("Dark Mode");
+    } else {
+        $('html').attr('data-bs-theme', 'dark');
+        $('#theme-toggle').text("Light Mode");
+    }
 }// end toggleTheme
 
 function toggleComplete(){
-    let time = {time: Date.now()}
+    // let time = {time: Date.now()}
     let id = $(this).parent().parent().data('id');
     $.ajax({
         method: 'PUT',
