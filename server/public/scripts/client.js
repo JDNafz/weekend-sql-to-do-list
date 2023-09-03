@@ -113,7 +113,7 @@ function getElementString(task){
         }
     elementString += `    
         <td>
-            <input class="btn" type="submit" value="Delete">
+            <input class="btn btn-outline-danger" type="submit" value="Delete">
         </td>
     </tr>`
     // console.log(elementString);
