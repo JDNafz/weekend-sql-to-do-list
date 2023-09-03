@@ -1,0 +1,40 @@
+// over write default variables in scss:
+// $primary: red;
+
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+$dark-green: rgb(38, 57, 22);
+$green-header: rgb(49, 80, 59);
+
+
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./muli/Muli.ttf');
+}
+* {
+    font-family: 'Muli';
+}
+
+#darkTheme {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2%;
+}
+
+div h1 {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+.tasks {
+    text-decoration: line-through;
+}
+
+#todoIn {
+    width: 40vw;
+}
+
+.container {
+    max-width: 900px;
+}

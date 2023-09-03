@@ -52,6 +52,7 @@ router.delete('/:id', (req,res) => {0
     pool.query(queryText, [req.params.id])
         .then((result) => {
             res.sendStatus(200);
+ 
         })
         .catch((err) => {
             console.log(`Error making query ${queryText}`,err );

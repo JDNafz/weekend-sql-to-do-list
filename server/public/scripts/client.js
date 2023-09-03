@@ -4,12 +4,23 @@ function onReady() {
     $('#submit-btn').on('click', addTask);
     $('#todoTable').on('click', '.delete-btn', deleteTask);
     $('#todoTable').on('change','.done-checkBox', toggleComplete);
-
+    $('#theme-toggle').on('click', toggleTheme)
     getTasks();   
 }
 
+function toggleTheme(){
+    console.log("toggle theme");
+    console.log("GET ATTRIBUTE: ", $('html').attr('data-bs-theme'));
+    if ($('html').attr('data-bs-theme') == 'dark'){
+        $('html').attr('data-bs-theme', 'light');
+        $('#theme-toggle').text("Dark Mode");
+    } else {
+        $('html').attr('data-bs-theme', 'dark');
+        $('#theme-toggle').text("Light Mode");
+    }
+}// end toggleTheme
+
 function toggleComplete(){
-    let time = {time: Date.now()}
     let id = $(this).parent().parent().data('id');
     $.ajax({
         method: 'PUT',
@@ -79,33 +90,33 @@ function render( tasks ) {
 
 function getElementString(task){
     let timeString = getTimeBack(task.time);
-    let elementString;
-    if (task.complete){
-        elementString = `
+    let elementString = `
         <tr class="complete">
             <td>
-                <input type="checkbox" class="done-checkBox" checked>
-            </td>
-            <td>${timeString}
-            </td>
-            <td class="tasks">${task.task}</td>
-            <td>
-                <input class="delete-btn" class="btn" type="submit" value="Delete">
-            </td>
-        </tr>`
-    } else {
-        elementString =`
-        <tr>
-            <td>
+            `
+    if (task.complete){ //COMPLETE
+        elementString += `
+            <input type="checkbox" class="done-checkBox" checked>
+        </td>
+        <td>${timeString}
+        </td>
+        <td class="tasks">${task.task}</td>
+            
+        `
+    } else { // NOT COMPLETE
+        elementString +=`
                 <input type="checkbox" class="done-checkBox">
             </td>
             <td></td>
             <td>${task.task}</td>
-            <td>
-                <input class="delete-btn" class="btn" type="submit" value="Delete">
-            </td>
-        </tr>`
-    }
+            `
+        }
+    elementString += `    
+        <td>
+            <input class="delete-btn btn btn-outline-danger" type="submit" value="Delete">
+        </td>
+    </tr>`
+    // console.log(elementString);
     return elementString
 }//end getElementString
 

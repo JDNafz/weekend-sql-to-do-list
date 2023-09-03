@@ -42,13 +42,16 @@ app.listen(PORT, () => {
 //         ✅  record when a task was completed, display on DOM
 //             ✅  refactor db to hold time completed.
 //             ✅  reformat time to DOM
-//                  go back and add Day of the week or date?
 
 //  feature-confirm-delete
 //      create an 'are you sure?' bootstrap modal? Sweet Alert?> CDN option
 
-// feature-light-dark-mode
-//          enable a toggle for light or dark mode
+// feature-styling-bootstrap
+//          ✅  Add Bootstrap 
+//          ✅  Buttons - red: delete, green: submit
+//          ✅  Inputs -- make your text inputs styled in the bootstrap way
+//          ✅  Responsive -- make your app responsive to different screen sizes
+//          ✅  enable a toggle for light or dark mode
 
 // feature-ordering-task-query
 //       Research [Query Params](https://expressjs.com/en/api.html#req.query) to have the request reverse the order of the returned TODOs  
