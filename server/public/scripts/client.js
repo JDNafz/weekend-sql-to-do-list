@@ -4,9 +4,13 @@ function onReady() {
     $('#submit-btn').on('click', addTask);
     $('#todoTable').on('click', '.delete-btn', deleteTask);
     $('#todoTable').on('change','.done-checkBox', toggleComplete);
-
+    $('#theme-toggle').on('click', toggleTheme)
     getTasks();   
 }
+
+function toggleTheme(){
+
+}// end toggleTheme
 
 function toggleComplete(){
     let time = {time: Date.now()}
@@ -100,7 +104,7 @@ function getElementString(task){
         }
     elementString += `    
         <td>
-            <input class="btn btn-dark" type="submit" value="Delete">
+            <input class="btn" type="submit" value="Delete">
         </td>
     </tr>`
     // console.log(elementString);

@@ -16,34 +16,16 @@ $green-header: rgb(49, 80, 59);
     font-family: 'Muli';
 }
 
-body {
-    background-color: $dark-green;
-  }
-  
-  
-header {
-    padding: 1rem;
-    background-color: $green-header;
-    color: #fafafa;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
- 
-  
-  thead tr {
-  background-color: #3c3c3c;
-  color: rgb(165, 180, 175);
-  }
-  
-  tr:nth-child(even) {
-    background-color: #959c96;
-  }
-  
-.complete {
-    background-color: rgb(113, 128, 116) !important;
+#darkTheme {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2%;
 }
 
+div h1 {
+    display: flex;
+    justify-content: center;
+}
 .tasks {
     text-decoration: line-through;
   }
