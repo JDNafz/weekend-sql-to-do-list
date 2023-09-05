@@ -11,16 +11,22 @@ function runListeners(){
     $('#theme-toggle').on('click', toggleTheme)
     
     $('#todoTable').on('click', '.delete-btn', confirmDelete);
-    $('#todoTable').on('click', '.confirmDelete', deleteTask);
+    $('#todoTable').on('click', '.areYouSure', deleteTask);
 }
 
 function confirmDelete(){
-    if ($(this).attr('Value') == "Are you sure?") {
-        $(this).attr('Value','delete');
+    // selecting AreYouSure
+    if ($(this).attr('Value') == "Delete") { // if $this is "fake" delete
+        $(this).attr('Value', "Are you sure?"); // Set to areYouSure
+        $(this).parent().prev().removeClass('d-none');// show REAL delete
+        //create fade to 'Keep'
+        $(this).delay(1200).animate({'opacity': 0}, 300, function () {
+            $(this).attr('Value', '      Keep!       ');
+            }).animate({'opacity': 1}, 500);
     } else {
-        $(this).attr('Value', "Are you sure?");
+        $(this).attr('Value','Delete');//set to $this back to "fake" Delete
+        $(this).parent().prev().addClass('d-none');//hide REAL delete btn
     }
-    $(this).parent().prev().removeClass('d-none');
     
 }
 
@@ -130,7 +136,7 @@ function getElementString(task){
         }
     elementString += `    
         <td class="d-none">
-            <input class="confirmDelete btn btn-danger" type="submit" value="Delete">
+            <input class="areYouSure btn btn-danger" type="submit" value="Delete">
         </td>
         <td>
             <input class="delete-btn btn btn-outline-danger" type="submit" value="Delete">
