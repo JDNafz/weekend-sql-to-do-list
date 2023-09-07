@@ -25,7 +25,7 @@ const pool = new Pool({
 // Spit out a console log when the pool connects
 // successfully:
 pool.on('connect', () => {
-    console.log('The magical pool thing connected to your postgres database. :)');
+    console.log('Clip Clop, we\'re connected to neon');
 })
 
 // Spit out a console log when the pool errors:
