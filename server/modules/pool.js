@@ -1,8 +1,6 @@
 const pg = require('pg');
 
-
-
-const pool = new pg.Pool;
+const Pool = pg.Pool;
 
 // Import your secret database info from the environment variables.
 const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
