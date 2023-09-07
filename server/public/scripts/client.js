@@ -80,7 +80,8 @@ function addTask() {
         url: '/tasks',
         data: taskToSend
     }).then(function(response) {
-        console.log(response);
+        // console.log(response);
+        $('#todoIn').val("");
         getTasks();
     }).catch(function(error) {
         console.log('error in task post', error);    

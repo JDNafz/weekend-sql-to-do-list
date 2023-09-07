@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     // console.log('server is req artist from db...')
     let queryText = `
     SELECT * FROM tasks 
-    ORDER BY "id" ASC;
+    ORDER BY "id" DESC;
     `;
     pool.query(queryText).then(
         (result) => {
