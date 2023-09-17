@@ -5,12 +5,6 @@ const Pool = pg.Pool;
 // Import your secret database info from the environment variables.
 const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
 
-// Interesting Boilerplate!
-// 1. Use the pool-dispening machine to obtain a
-//    pool object.
-// 2. Configure the "pool" object to be able
-//    to connect to our database, which is running
-//    at localhost:5432
 const pool = new Pool({
     host: PGHOST,
     port: 5432,
